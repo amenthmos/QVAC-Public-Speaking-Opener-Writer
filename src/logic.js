@@ -20,8 +20,7 @@ function stripWrapping(text) {
   return text
     .trim()
     .replace(/^here'?s[^:\n]*:\s*/i, "")
-    .replace(/^opener:\s*/i, "")
-    .replace(/^opening line:\s*/i, "")
+    .replace(/^(opener|opening line|hook|hook line):\s*/i, "")
     .trim()
     .replace(/^["“]|["”]$/g, "")
     .trim();
